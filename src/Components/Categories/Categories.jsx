@@ -1,10 +1,11 @@
 import { ButtonGroup, Button, Typography, Container } from '@mui/material';
-import { connect } from 'react-redux';
-import { selectCategory } from '../../Store/reducer';
+import { selectCategory } from '../../Store/actions';
+import { useDispatch, useSelector } from 'react-redux';
 
-const Categories = (props) => {
+const Categories = () => {
 
-  const { categories, selectCategory } = props;
+  const dispatch = useDispatch();
+  const { categories } = useSelector((state) => state.category);
 
   return (
     <>
@@ -14,7 +15,7 @@ const Categories = (props) => {
         </Typography>
         <ButtonGroup variant="contained" aria-label="outlined button group">
           {categories.map((category, index) => (
-          <Button key={`categories-index`} onClick={() => selectCategory(category.name)}>{category.displayName}</Button>
+          <Button key={`category-${index}`} data-testid={`category-${index}`} onClick={() => dispatch(selectCategory(category.name))}>{category.displayName}</Button>
           ))}
         </ButtonGroup>
       </Container>
@@ -22,12 +23,4 @@ const Categories = (props) => {
   )
 }
 
-const mapStateToProps = ({ products }) => {
-  return {
-    categories: products.categories,
-  }
-};
-
-const mapDispatchToProps = { selectCategory };
-
-export default connect(mapStateToProps, mapDispatchToProps)(Categories);
+export default Categories;
