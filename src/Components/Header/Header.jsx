@@ -18,7 +18,7 @@ const Header = () => {
       <ThemeProvider theme={theme}>
         <AppBar position="static" theme={theme}>
           <ToolBar>
-            <Typography variant='h4' className='header' >
+            <Typography variant='h4' className='header' data-testid='header'>
               Our Store
             </Typography>
             {}
