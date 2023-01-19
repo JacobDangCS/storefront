@@ -1,8 +1,8 @@
 /* eslint-disable array-callback-return */
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Button } from '@mui/material'
 import { removeProduct } from '../../Store/actions';
+import { When } from 'react-if';
 
 const SimpleCart = () => {
   const dispatch = useDispatch();
@@ -10,11 +10,15 @@ const SimpleCart = () => {
 
   return (
     <>
-    {cart.map((product, index) => {
-      <p key={`cart-${index}`}>{product.name}
-      <Button onClick={() => dispatch(removeProduct(product))}>X</Button>
-      </p>
-    })}
+      <When condition={cart.length > 0}>
+        <ul>
+          {cart.map((product, index) => {
+            <li key={`cart-${index}`}>{product.name}
+              <span onClick={() => dispatch(removeProduct(product))}>X</span>
+            </li>
+          })}
+        </ul>
+      </When>
     </>
   )
 }
