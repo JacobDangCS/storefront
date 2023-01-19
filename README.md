@@ -34,3 +34,26 @@ Phase 2 consists of combining reducers, an "Add to Cart" feature, and an operati
 
 ## Deployed Link
 [Lab37 URL]()
+
+
+# Storefront Phase 3
+A front-end application that involves using React & Redux for modularity and is meant to mimick a deployed product. The deployed app works as a virtual store, with categories of products, products themselves, a cart that contains picked items, etc.
+
+## Project Outline
+Phase 3 consists of implementing a live API and dispatch load actions using useEffect() & thunk. Thunk will be used asynchronously to perform the appropriate actions. Redux Toolkit will be used throughout the application as well.
+
+## Features
+- React
+- Redux
+- Thunk
+- Live API
+
+## API Endpoints
+- https://api-js401.herokuapp.com/api/v1/products
+- https://api-js401.herokuapp.com/api/v1/categories
+
+## UML
+[Lab38 UML](./assets/Lab38-image.png)
+
+## Deployed Link
+[Lab38 URL]()
