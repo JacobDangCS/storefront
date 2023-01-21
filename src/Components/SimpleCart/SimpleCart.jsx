@@ -1,7 +1,7 @@
 /* eslint-disable array-callback-return */
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { removeProduct } from '../../Store/actions';
+import { removeProduct } from '../../Store/cart/cart';
 import { When } from 'react-if';
 
 const SimpleCart = () => {

@@ -1,5 +1,5 @@
 import { ButtonGroup, Button, Typography, Container } from '@mui/material';
-import { getCategories, selectCategory } from '../../Store/actions';
+import { getCategories, selectCategory } from '../../Store/categories';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 

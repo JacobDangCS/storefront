@@ -1,32 +1,16 @@
-import {AppBar, ToolBar, Typography, ThemeProvider, createTheme} from '@mui/material';
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Header = () => {
-  const theme = createTheme({
-    palette: {
-      primary: {
-        light: '#ffff',
-      },
-      secondary: {
-        contrastText: '#000',
-      },
-    },
-  });
-
-
+  const { cart } = useSelector(state => state)
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <AppBar position="static" theme={theme}>
-          <ToolBar>
-            <Typography variant='h4' className='header' data-testid='header'>
-              Our Store
-            </Typography>
-            {}
-          </ToolBar>
-        </AppBar>
-      </ThemeProvider>
+      <header>
+        <Link default to="/">Our Store</Link>
+        <Link to="/cart">Cart ({cart.length})</Link>
+      </header>
     </>
   )
-}
+};
 
 export default Header;
