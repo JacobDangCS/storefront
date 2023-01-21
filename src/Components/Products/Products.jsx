@@ -1,8 +1,10 @@
 /* eslint-disable array-callback-return */
 import { useSelector, useDispatch } from 'react-redux';
 import { Button, Card } from '@mui/material';
-import { addProduct, adjustInventory, getProducts } from '../../Store/actions';
+import { addProduct } from '../../Store/cart/cart';
 import { useEffect } from 'react';
+import { adjustInventory, getProducts } from '../../Store/products';
+import { Link } from 'react-router-dom';
 
 const Products = () => {
 
@@ -26,7 +28,9 @@ const Products = () => {
     <>
       {activeCategory && renderList.map((product, index) => {
         <Card key={`product-${index}`}>{product.name}
-          <Button onClick={() => handler(product)}>X</Button>
+          <img style={{width: '15%'}} alt={product.name} src={`https://source.unsplash.com/random?${product.name}`}/>
+          <Button onClick={() => handler(product)}>Add Item</Button>
+          <Button component={Link} to={`/product/${product._id}`} onClick={() => handler(product)}>View Details</Button>
         </Card>
       })}
     </>
