@@ -19,6 +19,8 @@ const Products = () => {
 
   const renderList = products.filter(product => product.category === activeCategory);
 
+  console.log("LOOKING FOR RENDER LIST ", renderList);
+
   const handler = (product) => {
     dispatch(addProduct(product));
     dispatch(adjustInventory(product));
@@ -26,13 +28,13 @@ const Products = () => {
 
   return (
     <>
-      {activeCategory && renderList.map((product, index) => {
+      {activeCategory && renderList.map((product, index) => (
         <Card key={`product-${index}`}>{product.name}
           <img style={{width: '15%'}} alt={product.name} src={`https://source.unsplash.com/random?${product.name}`}/>
           <Button onClick={() => handler(product)}>Add Item</Button>
           <Button component={Link} to={`/product/${product._id}`} onClick={() => handler(product)}>View Details</Button>
         </Card>
-      })}
+      ))}
     </>
   )
 }
