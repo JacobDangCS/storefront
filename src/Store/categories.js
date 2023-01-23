@@ -48,6 +48,4 @@ export const getCategories = () => async(dispatch, getState) => {
 // }
 
 
-
-
 export default categoriesSlice.reducer;
