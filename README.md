@@ -14,7 +14,7 @@ Phase 1 consists of basic React set up and implementation of Redux. There is sta
 [Lab36 UML](./assets/Lab36-image.png)
 
 ## Deployed Link
-[Lab36 URL](https://63cb3d630817e06a8e1f4041--earnest-semolina-4f690a.netlify.app/)
+[Lab36 URL](https://earnest-semolina-4f690a.netlify.app/)
 
 
 # Storefront Phase 2
@@ -33,7 +33,7 @@ Phase 2 consists of combining reducers, an "Add to Cart" feature, and an operati
 [Lab37 UML](./assets/Lab37-image.png)
 
 ## Deployed Link
-[Lab37 URL](https://63cb3d630817e06a8e1f4041--earnest-semolina-4f690a.netlify.app/)
+[Lab37 URL](https://earnest-semolina-4f690a.netlify.app/)
 
 
 # Storefront Phase 3
@@ -56,4 +56,4 @@ Phase 3 consists of implementing a live API and dispatch load actions using useE
 [Lab38 UML](./assets/Lab38-image.png)
 
 ## Deployed Link
-[Lab38 URL](https://63cb3d630817e06a8e1f4041--earnest-semolina-4f690a.netlify.app/)
+[Lab38 URL](https://earnest-semolina-4f690a.netlify.app/)
